@@ -1,5 +1,10 @@
 import { Component, VERSION } from '@angular/core';
 
+class tempCity {
+  nome: string;
+  valore: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,16 +12,16 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   title: string = 'Temperature in Angular ' + VERSION.major;
-  cities = [
+  cities: Array<tempCity> = [
     {
       nome: 'Torino',
-      temperatura: '14'
+      valore: '14'
     }, {
       nome: 'Milano',
-      temperatura: '15'
+      valore: '15'
     }, {
       nome: 'Genova',
-      temperatura: '18'
+      valore: '18'
     }
   ];
 }
