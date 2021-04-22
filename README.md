@@ -1,5 +1,5 @@
 # angular-sswngtemperature
 
-La ricerca nell'array è sostituita con una GET ad un servizio che fornisce dati meteorologici
+L'array di oggetti con le temperature (inutili) è sostituito con un array di stringhe
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sswngtemperature)

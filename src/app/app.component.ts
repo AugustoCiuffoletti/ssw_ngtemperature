@@ -14,25 +14,12 @@ class tempCity {
 export class AppComponent  {
   title: string = 'Temperature in Angular ' + VERSION.major;
   selezione: tempCity;
-  cities: Array<tempCity> = [
-    {
-      nome: 'Torino',
-      valore: '14'
-    }, {
-      nome: 'Milano',
-      valore: '15'
-    }, {
-      nome: 'Genova',
-      valore: '18'
-    }
-  ];
-  constructor(private wbs: OpenweatherService) { }
+  cities: Array<string> = ['Torino','Milano','Genova'];
+  constructor(private ows: OpenweatherService) { }
   refreshTemperature(itemName: string) {
-    var trovato: Array<tempCity> = this.cities.filter(
-      el => ( el.nome === itemName )
-    );
-    this.selezione = trovato[0];
-    this.wbs.getData(this.selezione.nome).subscribe(
+    this.selezione = new tempCity;
+    this.selezione.nome = itemName;
+    this.ows.getData(this.selezione.nome).subscribe(
       ( x: any ) => this.selezione.valore = x.data[0].temp,
       err => console.error('Observer got an error: ' + err)
     );
