@@ -7,4 +7,16 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   title = 'Temperature in Angular ' + VERSION.major;
+  cities = [
+    {
+      nome: 'Torino',
+      temperatura: '14'
+    }, {
+      nome: 'Milano',
+      temperatura: '15'
+    }, {
+      nome: 'Genova',
+      temperatura: '18'
+    }
+  ];
 }
