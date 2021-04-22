@@ -8,9 +8,6 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent  {
   title: string = 'Temperature in Angular ' + VERSION.major;
   selezionata: string;
-  seleziona(name: string) {
-	  this.selezionata = name;
-  }
   cities = [
     {
       nome: 'Torino',
@@ -23,4 +20,10 @@ export class AppComponent  {
       temperatura: '18'
     }
   ];
+  seleziona(name: string) {
+	  this.selezionata = name;
+  }
+  clean() {
+    this.selezionata=undefined;
+  }
 }
