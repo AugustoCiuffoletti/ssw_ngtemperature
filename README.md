@@ -1,5 +1,5 @@
 # angular-sswngtemperature
 
-Aggiustiamo i file index.html e app.component.ts per avere app-root come root.
+Aggiungiamo un array di temperature ed un iteratore per visualizzarle
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sswngtemperature)
