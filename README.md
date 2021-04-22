@@ -1,5 +1,5 @@
 # angular-sswngtemperature
 
-La pressione sul bottone della città innesca una ricerca nell'array delle città
+La ricerca nell'array è sostituita con una GET ad un servizio che fornisce dati meteorologici
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sswngtemperature)
