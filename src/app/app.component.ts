@@ -26,13 +26,13 @@ export class AppComponent  {
       valore: '18'
     }
   ];
-  constructor(private wbs: OpenweatherService) { }
+  constructor(private ows: OpenweatherService) { }
   refreshTemperature(itemName: string) {
     var trovato: Array<tempCity> = this.cities.filter(
       el => ( el.nome === itemName )
     );
     this.selezione = trovato[0];
-    this.wbs.getData(this.selezione.nome).subscribe(
+    this.ows.getData(this.selezione.nome).subscribe(
       ( x: any ) => this.selezione.valore = x.data[0].temp,
       err => console.error('Observer got an error: ' + err)
     );
