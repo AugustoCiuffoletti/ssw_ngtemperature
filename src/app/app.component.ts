@@ -1,5 +1,10 @@
 import { Component, VERSION } from '@angular/core';
 
+class tempCity {
+  nome: string;
+  valore: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,23 +12,26 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   title: string = 'Temperature in Angular ' + VERSION.major;
-  selezionata: string;
-  cities = [
+  selezione: tempCity;
+  cities: Array<tempCity> = [
     {
       nome: 'Torino',
-      temperatura: '14'
+      valore: '14'
     }, {
       nome: 'Milano',
-      temperatura: '15'
+      valore: '15'
     }, {
       nome: 'Genova',
-      temperatura: '18'
+      valore: '18'
     }
   ];
-  seleziona(name: string) {
-	  this.selezionata = name;
+  seleziona(itemName: string) {
+    var trovato: Array<tempCity> = this.cities.filter(
+      el => ( el.nome === itemName )
+    );
+    this.selezione = trovato[0];
   }
   clean() {
-    this.selezionata=undefined;
+    this.selezione = undefined;
   }
 }
