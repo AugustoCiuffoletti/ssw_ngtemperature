@@ -6,7 +6,11 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  title = 'Temperature in Angular ' + VERSION.major;
+  title: string = 'Temperature in Angular ' + VERSION.major;
+  selezionata: string;
+  seleziona(name: string) {
+	  this.selezionata = name;
+  }
   cities = [
     {
       nome: 'Torino',
