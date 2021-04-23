@@ -1,10 +1,9 @@
 # Creazione di un componente child (notifica)
 
-- genero il nuovo componente "notifica"
-- Copio p e button dal template del parent a quello del child
-- Copio clean) dal controller del parent a quello del  child
-- esporto la classe tempCity da parent e la importo nel child (cityTemp inutilizzato)
-- in app template inserisco l'elemento con il tag app-notifica (notifica works)
+Passaggio dei dati dal parent al child
 
-Il prossimo passo è sul branch "preparaChild"
+- aggiungere attributo all'elemento app-notifica (ora funziona)
+- rimuovere "notifica works"
+- evidenziare parametri
+
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sswngtemperature)
