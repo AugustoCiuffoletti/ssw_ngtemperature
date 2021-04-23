@@ -10,7 +10,7 @@ export class NotificaComponent implements OnInit {
   @Input() selezioneC: tempCity;
   constructor() { }
   clean() {
-    this.selezioneC.nome = undefined;
+    this.selezioneC = undefined;
   }
   ngOnInit() {
   }
