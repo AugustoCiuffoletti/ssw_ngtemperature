@@ -24,5 +24,4 @@ export class AppComponent  {
       err => console.error('Observer got an error: ' + err)
     );
  }
-  
 }
