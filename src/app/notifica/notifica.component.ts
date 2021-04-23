@@ -9,7 +9,7 @@ import { tempCity } from '../app.component'
 export class NotificaComponent implements OnInit {
   constructor() { }
   clean() {
-    this.selezione.nome = undefined;
+    this.selezione = undefined;
   }
   ngOnInit() {
   }
