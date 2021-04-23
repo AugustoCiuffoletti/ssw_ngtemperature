@@ -10,4 +10,6 @@ E' necessario installare i package, e configurare l'accesso ai test
 
 Utilizzando l'ambiente di sviluppo da linea di comando queste configurazioni sono eseguite automaticamente.
 
+Credits: [Link](https://lukasznojek.com/blog/2019/05/add-jasmine-unit-testing-support-to-angular-in-stackblitz/)
+
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sswngtemperature)
