@@ -5,11 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { OpenweatherService } from './openweather.service';
+import { NotificaComponent } from './notifica/notifica.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
     HttpClientModule ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, NotificaComponent ],
   bootstrap:    [ AppComponent ],
   providers: [OpenweatherService]
 })

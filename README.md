@@ -1,5 +1,5 @@
 # angular-sswngtemperature
 
-L'array di oggetti con le temperature (inutili) è sostituito con un array di stringhe
+Nella creazione di un nuovo componente annidato. Creazione del uovo componente.
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sswngtemperature)
