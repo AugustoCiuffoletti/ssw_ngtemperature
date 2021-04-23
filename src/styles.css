@@ -1,1 +1,2 @@
-/* Add application styles & imports to this file! */
+import jasmineRequire from 'jasmine-core/lib/jasmine-core/jasmine.js';
+window.jasmineRequire = jasmineRequire;
