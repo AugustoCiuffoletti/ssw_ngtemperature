@@ -22,7 +22,6 @@ export class AppComponent  {
   constructor(private ows: OpenweatherService) { }
   refreshTemperature(itemName: string) {
     this.selezione = new tempCity(itemName, undefined);
-    this.selezione.nome = itemName;
     this.ows.getData(this.selezione.nome).subscribe(
       ( x: any ) => this.selezione.valore = x.data[0].temp,
       err => console.error('Observer got an error: ' + err)
