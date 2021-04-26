@@ -34,7 +34,7 @@ describe("AppComponent", () => {
     expect(app.title).toEqual("Temperature in Angular 11");
   });
 
-  it("la proprietà selezione dovrebbe essere indefinita", () => {
+  it("l'oggetto selezione dovrebbe essere indefinita", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.selezione).toBeUndefined();
