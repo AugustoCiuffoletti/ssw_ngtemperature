@@ -2,7 +2,11 @@ import { Component, VERSION } from '@angular/core';
 
 class tempCity {
   nome: string;
-  valore: string
+  valore: string; 
+  constructor(nome: string, valore: string) {
+    this.nome=nome;
+    this.valore=valore;
+  }
 }
 
 @Component({
@@ -13,15 +17,8 @@ class tempCity {
 export class AppComponent  {
   title: string = 'Temperature in Angular ' + VERSION.major;
   cities: Array<tempCity> = [
-    {
-      nome: 'Torino',
-      valore: '14'
-    }, {
-      nome: 'Milano',
-      valore: '15'
-    }, {
-      nome: 'Genova',
-      valore: '18'
-    }
+    new tempCity('Torino','14'),
+    new tempCity('Milano','15'),
+    new tempCity('Genova','18')
   ];
 }
