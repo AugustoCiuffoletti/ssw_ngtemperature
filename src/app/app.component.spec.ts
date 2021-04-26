@@ -5,8 +5,8 @@ import { OpenweatherService } from "./openweather.service";
 
 
 describe('Testing tests', () => {
-  it('should succeed', () => expect(true).toEqual(true));
-  it('should fail', () => expect(true).toEqual(false));
+  it('should succeed', () => expect(true).toBeTrue);
+  it('should fail', () => expect(false).toBeFalse);
 });
 
 describe('AppComponent', () => {
