@@ -1,7 +1,8 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from "@angular/common/http";
-import { AppComponent } from './app.component';
+import { AppComponent, tempCity } from './app.component';
 import { OpenweatherService } from "./openweather.service";
+import { FakesvcService } from "./fakesvc.service";
 
 
 describe('Testing tests', () => {
@@ -17,7 +18,7 @@ describe('AppComponent', () => {
       ],
       providers: [
         AppComponent,
-        { provide: OpenweatherService, useClass: OpenweatherService }
+        { provide: OpenweatherService, useClass: FakesvcService }
       ]
     }).compileComponents();
   }));
@@ -46,6 +47,13 @@ it('la proprietà cities dovrebbe contenere quella inserita con addCity', () => 
     const app = fixture.debugElement.componentInstance;
     app.addCity("Verona");
     expect(app.cities).toContain('Verona');
+});
+
+it('la proprietà selezione dovrebbe contenere città e temperatura corretti', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.refreshTemperature("Verona");
+    expect(app.selezione).toEqual(new tempCity('Verona', 12));
 });
 
 });

@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { OpenweatherService } from './openweather.service';
 import { NotificaComponent } from './notifica/notifica.component';
 import { NewcityComponent } from './newcity/newcity.component';
+import { FakesvcService } from './fakesvc.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,
     HttpClientModule ],
   declarations: [ AppComponent, NotificaComponent, NewcityComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [OpenweatherService]
+  providers: [OpenweatherService, FakesvcService]
 })
 export class AppModule { }
