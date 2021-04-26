@@ -3,7 +3,11 @@ import { OpenweatherService } from './openweather.service';
 
 export class tempCity {
   nome: string;
-  valore: string
+  valore: string;
+  constructor (nome: string, valore: string) {
+    this.nome=nome;
+    this.valore=valore;
+  }
 }
 
 @Component({
@@ -17,7 +21,7 @@ export class AppComponent  {
   cities: Array<string> = ['Torino','Milano','Genova'];
   constructor(private ows: OpenweatherService) { }
   refreshTemperature(itemName: string) {
-    this.selezione = new tempCity;
+    this.selezione = new tempCity(itemName, undefined);
     this.selezione.nome = itemName;
     this.ows.getData(this.selezione.nome).subscribe(
       ( x: any ) => this.selezione.valore = x.data[0].temp,
