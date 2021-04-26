@@ -3,7 +3,11 @@ import { OpenweatherService } from './openweather.service';
 
 class tempCity {
   nome: string;
-  valore: string
+  valore: string;
+  constructor(nome: string, valore: string) {
+    this.nome=nome;
+    this.valore=valore;
+  }
 }
 
 @Component({
@@ -15,16 +19,9 @@ export class AppComponent  {
   title: string = 'Temperature in Angular ' + VERSION.major;
   selezione: tempCity;
   cities: Array<tempCity> = [
-    {
-      nome: 'Torino',
-      valore: '14'
-    }, {
-      nome: 'Milano',
-      valore: '15'
-    }, {
-      nome: 'Genova',
-      valore: '18'
-    }
+    new tempCity('Torino','14'),
+    new tempCity('Milano','15'),
+    new tempCity('Genova','18')
   ];
   constructor(private ows: OpenweatherService) { }
   refreshTemperature(itemName: string) {
