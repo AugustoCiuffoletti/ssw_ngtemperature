@@ -1,6 +1,13 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
+import { OpenweatherService } from "./openweather.service";
+
+
+describe('Testing tests', () => {
+  it('should succeed', () => expect(true).toEqual(true));
+  it('should fail', () => expect(true).toEqual(false));
+});
 
 describe('AppComponent', () => {
   beforeEach(waitForAsync(() => {
@@ -8,9 +15,10 @@ describe('AppComponent', () => {
       imports: [
         HttpClientModule
       ],
-      declarations: [
-        AppComponent
-      ],
+      providers: [
+        AppComponent,
+        { provide: OpenweatherService, useClass: OpenweatherService }
+      ]
     }).compileComponents();
   }));
 
@@ -20,14 +28,24 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+
   it(`should have as title 'Temperature in Angular 11'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Temperature in Angular 11');
   });
+
+  it('la proprietà selezione dovrebbe essere indefinita', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.selezione).toBeUndefined();
 });
 
-describe('Testing tests', () => {
-  it('should succeed', () => expect(true).toEqual(true));
-  it('should fail', () => expect(true).toEqual(false));
+it('la proprietà cities dovrebbe contnere quella inserita', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.addCity("Verona");
+    expect(app.cities).toContain('Verona');
+});
+
 });
