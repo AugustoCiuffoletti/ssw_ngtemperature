@@ -41,7 +41,7 @@ describe('AppComponent', () => {
     expect(app.selezione).toBeUndefined();
 });
 
-it('la proprietà cities dovrebbe contnere quella inserita', () => {
+it('la proprietà cities dovrebbe contenere quella inserita con addCity', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     app.addCity("Verona");
