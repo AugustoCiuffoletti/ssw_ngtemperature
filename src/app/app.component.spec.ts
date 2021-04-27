@@ -47,7 +47,7 @@ describe("AppComponent", () => {
     expect(app.cities).toContain("Verona");
   });
 
-  it("l'oggetto selezione dovrebbe contenere città e temperatura corretti", () => {
+  it("l'oggetto selezione dovrebbe contenere i dati attesi", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     app.refreshTemperature("Verona");
