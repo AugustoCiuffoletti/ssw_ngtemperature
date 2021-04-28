@@ -51,6 +51,6 @@ describe("AppComponent", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     app.refreshTemperature("Verona");
-    expect(app.selezione).toEqual(new tempCity("Verona", 12));
+    expect(app.selezione).toEqual(new tempCity("Verona", "12"));
   });
 });
