@@ -1,4 +1,4 @@
-import { TestBed } from "@angular/core/testing";
+import { TestBed, waitForAsync } from "@angular/core/testing";
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { OpenweatherService } from "./openweather.service";
@@ -9,12 +9,12 @@ describe("Testing tests", () => {
 });
 
 describe("AppComponent", () => {
-  beforeEach(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       providers: [AppComponent]
     }).compileComponents();
-  });
+  }));
 
   it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
