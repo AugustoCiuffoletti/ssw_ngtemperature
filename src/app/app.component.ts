@@ -25,10 +25,10 @@ export class AppComponent {
     this.selezione.nome = itemName;
     this.ows
       .getData(this.selezione.nome)
-      .subscribe(
-        (x: any) => (this.selezione.valore = x.data[0].temp),
-        err => console.error("Observer got an error: " + err)
-      );
+      .subscribe({
+        next: (x: any) => (this.selezione.valore = x.main.temp),
+        error: err => console.error("Observer got an error: " + err)
+      });
   }
   addCity(newCity: string) {
     this.cities.push(newCity);
