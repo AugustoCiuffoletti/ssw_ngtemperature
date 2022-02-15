@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { tempCity } from '../app.component'
 
 @Component({
   selector: 'app-notifica',
