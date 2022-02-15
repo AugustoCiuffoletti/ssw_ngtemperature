@@ -24,7 +24,7 @@ export class AppComponent  {
     this.selezione = new tempCity(itemName, undefined);
     this.ows.getData(this.selezione.nome).subscribe({
       next: ( x: any ) => this.selezione.valore = x.main.temp,
-      error: err => console.error('Observer got an error: ' + err)
+      error: err => console.error('Observer got an error: ' + JSON.stringify(err))
     });
  }
   
