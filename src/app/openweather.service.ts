@@ -6,11 +6,14 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class OpenweatherService {
-  apiKEY: string = 'f2e72c0506fe42ca90fe869aeca6b59a'
-  apiURL: string = 'https://api.weatherbit.io/v2.0/current';
+  apiKey: string = "d0475be3a1967b1b49dfc02c8128001a";
+  URL: string  =
+  "https://api.openweathermap.org/data/2.5/weather?APPID=" +
+  this.apiKey +
+  "&units=metric&q=";
   constructor(private http: HttpClient) { }
 
-  public getData(CityName: string): Observable<Object> {
-    return this.http.get(this.apiURL+'?key='+this.apiKEY+'&city='+CityName);
+  public getData(CityName: string): Observable<string> {
+    return this.http.get<string>(this.URL+CityName);
   }
 }
